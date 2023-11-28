@@ -1,0 +1,9 @@
+import './script/animations';
+import './script/buttons';
+import './script/carousel';
+import './script/expansion';
+import './script/modal';
+import './script/navbar';
+import './script/samples';
+import './script/sidebar';
+import './script/tables';
