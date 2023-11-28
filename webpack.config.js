@@ -8,6 +8,10 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: './src/index.ts',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].bundle.js'
+  },
   module: {
     rules: [
       {
@@ -27,10 +31,6 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
@@ -49,7 +49,17 @@ module.exports = {
     minimizer: [
       new CssMinimizerPlugin(),
       new TerserPlugin()
-    ]
+    ],
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
+    }
   },
   devServer: {
     static: path.join(__dirname, 'dist'),
