@@ -1,0 +1,150 @@
+:root {
+    --default-btn-color: hsl(0, 0%, 89%);
+    --default-txt-color: hsl(0, 0%, 13%);
+    --hover-btn-color: hsl(0, 0%, 80%);
+    --hover-txt-color: rgb(255, 255, 255);
+    --secondary-btn-color: hsl(200, 100%, 50%);
+    --secondary-txt-color: hsl(0, 0%, 100%);
+    --btn-animation-thick: .2rem;
+    --btn-badge-bg: hsl(348, 83%, 47%);
+    --btn-badge-txt: hsl(0, 0%, 100%);
+}
+
+.btn {
+    background-color: var(--default-btn-color);
+    color: var(--default-txt-color);
+    padding: .5em 1em;
+    border: none;
+    border-radius: .25em;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    font-size: 1em;
+    &.btn-outline {
+        background: none;
+        border: 1px solid var(--default-btn-color);
+    }
+    &:hover,
+    &:focus {
+        background-color: var(--hover-btn-color);
+        color: var(--hover-txt-color);
+    }
+    &.btn-border-pop {
+        background-color: var(--default-btn-color);
+        color: var(--default-txt-color);
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: .5em;
+            z-index: -1;
+            border: var(--secondary-btn-color) solid var(--btn-animation-thick);
+            transition: top, left, right, bottom, 100ms ease-in-out;
+        }
+        &:hover::before,
+        &:focus::before {
+            top: calc(var(--btn-animation-thick) * -2);
+            left: calc(var(--btn-animation-thick) * -2);
+            right: calc(var(--btn-animation-thick) * -2);
+            bottom: calc(var(--btn-animation-thick) * -2);
+        }
+    }
+    &.btn-background-slide {
+        background-color: var(--default-btn-color);
+        color: var(--default-txt-color);
+        z-index: 1;
+        transition: color 300ms ease-in-out;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: .25em;
+            z-index: -1;
+            background-color: var(--secondary-btn-color);
+            transition: transform 300ms ease-in-out;
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+        &:hover,
+        &:focus {
+            color: var(--secondary-txt-color);
+            &::before {
+                transform: scaleX(1);
+            }
+        }
+    }
+    &.btn-background-circle {
+        z-index: 1;
+        overflow: hidden;
+        background-color: var(--secondary-btn-color);
+        color: var(--default-txt-color);
+        transition: color 500ms ease-in-out;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background-color: var(--default-btn-color);
+            border-radius: 50%;
+            transition: transform 500ms ease-in-out;
+            transform: scale(1.5);
+        }
+        &:hover,
+        &:focus {
+            color: var(--secondary-txt-color);
+            &::before {
+                transform: scale(0);
+            }
+        }
+    }
+    &.btn-border-underline {
+        background-color: var(--default-btn-color);
+        color: var(--default-txt-color);
+        overflow: hidden;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: var(--btn-animation-thick);
+            background-color: var(--secondary-btn-color);
+            transition: transform 300ms ease-in-out;
+            transform: scaleX(0);
+        }
+        &:hover::before,
+        &:focus::before {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.badge {
+    &::after {
+        content: attr(badge-count);
+        position: absolute;
+        top: -0.75em;
+        right: -0.75em;
+        width: 1.75em;
+        height: 1.75em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: var(--btn-badge-bg);
+        color: var(--btn-badge-txt);
+        z-index: 10;
+    }
+    &.no-count::after {
+        display: none;
+    }
+}

@@ -1,0 +1,37 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100%;
+}
+
+.group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    & button {
+        margin: 1rem;
+    }
+}
+
+.card-group {
+    padding: 1rem;
+}
+
+.carousel-group {
+    width: 100%;
+    height: 300px;
+}
+
+.wrapper {
+    width: min(600px, 100% - 3rem);
+    margin-inline: auto;
+}

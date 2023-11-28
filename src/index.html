@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samples</title>
+    <link rel="stylesheet" href="assets/css/samples.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/buttons.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="assets/css/expansion.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/tables.css">
+</head>
+<body>
+    <nav class="navbar sticky">
+        <div class="navbar-brand">Brand</div>
+        <div class="navbar-toggle" navbar-toggle>
+            <span class="navbar-toggle-bar"></span>
+            <span class="navbar-toggle-bar"></span>
+            <span class="navbar-toggle-bar"></span>
+        </div>
+        <div class="navbar-links" navbar-links>
+            <div class="dropdown" data-dropdown>
+                <button class="navbar-link" data-dropdown-button>Content</button>
+                <div class="dropdown-menu">
+                    This is just some text
+                </div>
+            </div>
+            <div class="dropdown" data-dropdown>
+                <button class="navbar-link" data-dropdown-button>Grid</button>
+                <div class="dropdown-menu grids">
+                    <div>
+                        <div class="dropdown-heading">Grid 1</div>
+                        <div class="dropdown-links">
+                            <button class="dropdown-link">Data 1.1</button>
+                            <button class="dropdown-link">Data 1.2</button>
+                            <button class="dropdown-link">Data 1.3</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="dropdown-heading">Grid 2</div>
+                        <div class="dropdown-links">
+                            <button class="dropdown-link">Data 2.1</button>
+                            <button class="dropdown-link">Data 2.2</button>
+                            <button class="dropdown-link">Data 2.3</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="dropdown-heading">Grid 3</div>
+                        <div class="dropdown-links">
+                            <button class="dropdown-link">Data 3.1</button>
+                            <button class="dropdown-link">Data 3.2</button>
+                            <button class="dropdown-link">Data 3.3</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="dropdown-heading">Grid 4</div>
+                        <div class="dropdown-links">
+                            <button class="dropdown-link">Data 4.1</button>
+                            <button class="dropdown-link">Data 4.2</button>
+                            <button class="dropdown-link">Data 4.3</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="dropdown-heading">Grid 5</div>
+                        <div class="dropdown-links">
+                            <button class="dropdown-link">Data 5.1</button>
+                            <button class="dropdown-link">Data 5.2</button>
+                            <button class="dropdown-link">Data 5.3</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="navbar-link">Contacts</a>
+            <div class="dropdown" data-dropdown>
+                <button class="navbar-link" data-dropdown-button>Login</button>
+                <div class="dropdown-menu">
+                    <form class="login-form">
+                        <label for="login">Login</label>
+                        <input type="text" name="login" id="login">
+                        <label for="password">Password</label>
+                        <input type="text" name="password" id="password">
+                        <button type="submit" class="btn login-button">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="sidebar-container">
+        <aside class="sidebar open">
+            <div class="sidebar-top">
+                <div class="sidebar-toggle" sidebar-toggle>
+                    <svg class="sidebar-hide" viewBox="0 0 16 16">
+                        <path d="M11.726 5.263a.7.7 0 10-.952-1.026l-3.5 3.25a.7.7 0 000 1.026l3.5 3.25a.7.7 0 00.952-1.026L8.78 8l2.947-2.737z"></path>
+                        <path fill-rule="evenodd" d="M1 3.25A2.25 2.25 0 013.25 1h9.5A2.25 2.25 0 0115 3.25v9.5A2.25 2.25 0 0112.75 15h-9.5A2.25 2.25 0 011 12.75v-9.5zm2.25-.75a.75.75 0 00-.75.75v9.5c0 .414.336.75.75.75h1.3v-11h-1.3zm9.5 11h-6.8v-11h6.8a.75.75 0 01.75.75v9.5a.75.75 0 01-.75.75z"></path>
+                    </svg>
+                    <svg class="sidebar-show" viewBox="0 0 16 16">
+                        <path d="M7.774 5.263a.7.7 0 11.952-1.026l3.5 3.25a.7.7 0 010 1.026l-3.5 3.25a.7.7 0 01-.952-1.026L10.72 8 7.774 5.263z"></path>
+                        <path fill-rule="evenodd" d="M1 3.25A2.25 2.25 0 013.25 1h9.5A2.25 2.25 0 0115 3.25v9.5A2.25 2.25 0 0112.75 15h-9.5A2.25 2.25 0 011 12.75v-9.5zm2.25-.75a.75.75 0 00-.75.75v9.5c0 .414.336.75.75.75h1.3v-11h-1.3zm9.5 11h-6.8v-11h6.8a.75.75 0 01.75.75v9.5a.75.75 0 01-.75.75z"></path>
+                    </svg>
+                </div>
+                <a href="#" class="sidebar-logo"><img src="assets/img/shark.png" alt="Logo"></a>
+                <div class="sidebar-logo-text">Brand</div>
+            </div>
+            <div class="sidebar-mid">
+                <div class="sidebar-links" sidebar-links>
+                    <button class="sidebar-link active">
+                        <svg class="sidebar-link-icon" viewBox="0 0 24 24">
+                            <path d="M14,10V22H4a2,2,0,0,1-2-2V10Z"></path>
+                            <path d="M22,10V20a2,2,0,0,1-2,2H16V10Z"></path>
+                            <path d="M22,4V8H2V4A2,2,0,0,1,4,2H20A2,2,0,0,1,22,4Z"></path>
+                        </svg>
+                        <span class="sidebar-link-text">Dashboard</span>
+                    </button>
+                    <button class="sidebar-link">
+                        <svg class="sidebar-link-icon" viewBox="0 0 1920 1920">
+                            <path d="M746.667 1374.31V545.935l690.346 414.187-690.346 414.186ZM1879.04 321.615c-600.107-143.467-1238.4-143.467-1838.08 0L0 331.429v1257.494l40.96 9.813c300.053 71.68 609.28 108.053 919.04 108.053 309.867 0 619.2-36.373 919.04-108.053l40.96-9.813V331.429l-40.96-9.813Z" fill-rule="evenodd"></path>
+                        </svg>
+                        <span class="sidebar-link-text">Media</span>
+                    </button>
+                    <button class="sidebar-link">
+                        <svg class="sidebar-link-icon" viewBox="0 0 1920 1920">
+                            <path d="M1920 428.266v1189.54l-464.16-580.146-88.203 70.585 468.679 585.904H83.684l468.679-585.904-88.202-70.585L0 1617.805V428.265l959.944 832.441L1920 428.266ZM1919.932 226v52.627l-959.943 832.44L.045 278.628V226h1919.887Z" fill-rule="evenodd"></path>
+                        </svg>
+                        <span class="sidebar-link-text">Contact</span>
+                    </button>
+                    <button class="sidebar-link">
+                        <svg class="sidebar-link-icon" viewBox="0 -4 32 32">
+                            <path d="m10 12v8h-4v-8zm6-8v16h-4v-16zm16 18v2h-32v-24h2v22zm-10-14v12h-4v-12zm6-6v18h-4v-18z"></path>
+                        </svg>
+                        <span class="sidebar-link-text">Analytics</span>
+                    </button>
+                    <button class="sidebar-link">
+                        <svg class="sidebar-link-icon" viewBox="-1 0 19 19">
+                            <path d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zm-3.297 3.103-2.424-2.424a3.978 3.978 0 1 0-1.119 1.12l2.424 2.423a.791.791 0 1 0 1.119-1.12zM9.633 5.808a3.189 3.189 0 1 1-2.255-.934 3.167 3.167 0 0 1 2.255.934z"></path>
+                        </svg>
+                        <span class="sidebar-link-text">Find</span>
+                    </button>
+                </div>
+            </div>
+            <div class="sidebar-end">
+                <div class="sidebar-links" sidebar-links>
+                    <button class="sidebar-link">
+                        <svg class="sidebar-link-icon" viewBox="0 0 1920 1920">
+                            <path d="M1703.534 960c0-41.788-3.84-84.48-11.633-127.172l210.184-182.174-199.454-340.856-265.186 88.433c-66.974-55.567-143.323-99.389-223.85-128.415L1158.932 0h-397.78L706.49 269.704c-81.43 29.138-156.423 72.282-223.962 128.414l-265.073-88.32L18 650.654l210.184 182.174C220.39 875.52 216.55 918.212 216.55 960s3.84 84.48 11.633 127.172L18 1269.346l199.454 340.856 265.186-88.433c66.974 55.567 143.322 99.389 223.85 128.415L761.152 1920h397.779l54.663-269.704c81.318-29.138 156.424-72.282 223.963-128.414l265.073 88.433 199.454-340.856-210.184-182.174c7.793-42.805 11.633-85.497 11.633-127.285m-743.492 395.294c-217.976 0-395.294-177.318-395.294-395.294 0-217.976 177.318-395.294 395.294-395.294 217.977 0 395.294 177.318 395.294 395.294 0 217.976-177.317 395.294-395.294 395.294"></path>
+                        </svg>
+                        <span class="sidebar-link-text">Settings</span>
+                    </button>
+                    <button class="sidebar-link">
+                        <svg class="sidebar-link-icon" viewBox="0 0 24 24">
+                            <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zM7.92 9.234v.102a.5.5 0 0 0 .5.5h.997a.499.499 0 0 0 .499-.499c0-1.29.998-1.979 2.34-1.979 1.308 0 2.168.689 2.168 1.67 0 .928-.482 1.359-1.686 1.91l-.344.154C11.379 11.54 11 12.21 11 13.381v.119a.5.5 0 0 0 .5.5h.997a.499.499 0 0 0 .499-.499c0-.516.138-.723.55-.912l.345-.155c1.445-.654 2.529-1.514 2.529-3.39v-.103c0-1.978-1.72-3.441-4.164-3.441-2.478 0-4.336 1.428-4.336 3.734zm2.58 7.757c0 .867.659 1.509 1.491 1.509.85 0 1.509-.642 1.509-1.509 0-.867-.659-1.491-1.509-1.491-.832 0-1.491.624-1.491 1.491z"></path>
+                        </svg>
+                        <span class="sidebar-link-text">Help</span>
+                    </button>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <div class="group">
+                <h3>Animation examples</h3>
+            </div>
+            <div class="animation-group">
+                <div class="animation-container gradient" animation>
+                    <span>ANIMATION</span>
+                </div>
+                <div class="animation-container lower-case" animation>
+                    <span>ANIMATION</span>
+                </div>
+                <div class="animation-container rotating" animation>
+                    <span>ANIMATION</span>
+                </div>
+            </div>
+            <div class="group">
+                <h3>Hover effects</h3>
+            </div>
+            <div class="group">
+                <button class="btn btn-border-pop">Border</button>
+                <button class="btn btn-background-slide">Slide</button>
+                <button class="btn btn-background-circle">Circle</button>
+                <button class="btn btn-border-underline">Underline</button>
+            </div>
+            <div class="group">
+                <h3>Notification effects</h3>
+            </div>
+            <div class="group">
+                <button class="btn badge no-count" badge-count>Notifications</button>
+                <button class="btn" badge-count-increase>+</button>
+            </div>
+            <div class="group">
+                <h3>Modal examples</h3>
+            </div>
+            <div class="group">
+                <button class="btn" modal-open="hello">Hello Modal</button>
+                <button class="btn" modal-open="test">Test Modal</button>
+            </div>
+            <div class="group">
+                <h3>Responsive table</h3>
+            </div>
+            <div class="wrapper">
+                <div class="table-container">
+                    <table>
+                        <caption>Team members points</caption>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th>Points</th>
+                            <th>Team</th>
+                            <th>Age</th>
+                            <th>Country</th>
+                        </tr>
+                        <tr>
+                            <td cell-name="name">Frost</td>
+                            <td cell-name="points">43</td>
+                            <td cell-name="team">Milstron</td>
+                            <td cell-name="age">20</td>
+                            <td cell-name="country">USA</td>
+                        </tr>
+                        <tr>
+                            <td cell-name="name">Baker</td>
+                            <td cell-name="points">41</td>
+                            <td cell-name="team">Alabasta</td>
+                            <td cell-name="age">30</td>
+                            <td cell-name="country">England</td>
+                        </tr>
+                        <tr>
+                            <td cell-name="name">Maxwell</td>
+                            <td cell-name="points">50</td>
+                            <td cell-name="team">Alabasta</td>
+                            <td cell-name="age">25</td>
+                            <td cell-name="country">USA</td>
+                        </tr>
+                        <tr>
+                            <td cell-name="name">Chase</td>
+                            <td cell-name="points">48</td>
+                            <td cell-name="team">Milstron</td>
+                            <td cell-name="age">27</td>
+                            <td cell-name="country">Australia</td>
+                        </tr>
+                        <tr>
+                            <td cell-name="name">Kevin</td>
+                            <td cell-name="points">47</td>
+                            <td cell-name="team">Alabasta</td>
+                            <td cell-name="age">28</td>
+                            <td cell-name="country">Australia</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="group">
+                <h3>Carousel example</h3>
+            </div>
+            <div class="carousel-group">
+                <div class="carousel" carousel auto-play>
+                    <button class="carousel-btn prev" carousel-button="prev">&#8656</button>
+                    <button class="carousel-btn next" carousel-button="next">&#8658</button>
+                    <div>
+                        <img src="assets/img/carousel1.jpg" alt="" class="slide" carousel-slide>
+                        <img src="assets/img/carousel2.jpg" alt="" class="slide" carousel-slide>
+                        <img src="assets/img/carousel3.jpg" alt="" class="slide" carousel-slide>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <h3>Expansion example</h3>
+            </div>
+            <div class="expansion" expansion>
+                <div class="expansion-panel" expansion-panel>
+                    <h2 class="expansion-title">Expansion 1</h2>
+                    <div class="expansion-content">
+                        <div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis error aut cum, quos officiis ut magnam assumenda, omnis praesentium dicta voluptatem possimus molestias, excepturi dolore! Deserunt aperiam debitis fuga suscipit.</p>
+                            <p>Modi aspernatur odit, itaque expedita et sed. Voluptates recusandae minima sapiente quae doloribus vitae dolor! Eos sunt nam qui quia, cum dignissimos beatae exercitationem, ea nesciunt enim assumenda modi quod?</p>
+                            <p>Perspiciatis laborum optio vitae omnis qui ratione recusandae fugit itaque et quam quis atque adipisci suscipit necessitatibus asperiores fugiat nisi numquam, porro iusto ducimus. Aliquam cupiditate assumenda vitae facilis illo.</p>
+                            <p>Nemo alias, dicta ex sit voluptas maiores modi molestiae laborum expedita odio architecto minus sint perspiciatis, voluptates aperiam corrupti numquam praesentium, totam esse. Iusto aspernatur delectus neque expedita sed corrupti.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="expansion-panel" expansion-panel>
+                    <h2 class="expansion-title">Expansion 2</h2>
+                    <div class="expansion-content">
+                        <div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis error aut cum, quos officiis ut magnam assumenda, omnis praesentium dicta voluptatem possimus molestias, excepturi dolore! Deserunt aperiam debitis fuga suscipit.</p>
+                            <p>Modi aspernatur odit, itaque expedita et sed. Voluptates recusandae minima sapiente quae doloribus vitae dolor! Eos sunt nam qui quia, cum dignissimos beatae exercitationem, ea nesciunt enim assumenda modi quod?</p>
+                            <p>Perspiciatis laborum optio vitae omnis qui ratione recusandae fugit itaque et quam quis atque adipisci suscipit necessitatibus asperiores fugiat nisi numquam, porro iusto ducimus. Aliquam cupiditate assumenda vitae facilis illo.</p>
+                            <p>Nemo alias, dicta ex sit voluptas maiores modi molestiae laborum expedita odio architecto minus sint perspiciatis, voluptates aperiam corrupti numquam praesentium, totam esse. Iusto aspernatur delectus neque expedita sed corrupti.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="expansion-panel" expansion-panel>
+                    <h2 class="expansion-title">Expansion 3</h2>
+                    <div class="expansion-content">
+                        <div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis error aut cum, quos officiis ut magnam assumenda, omnis praesentium dicta voluptatem possimus molestias, excepturi dolore! Deserunt aperiam debitis fuga suscipit.</p>
+                            <p>Modi aspernatur odit, itaque expedita et sed. Voluptates recusandae minima sapiente quae doloribus vitae dolor! Eos sunt nam qui quia, cum dignissimos beatae exercitationem, ea nesciunt enim assumenda modi quod?</p>
+                            <p>Perspiciatis laborum optio vitae omnis qui ratione recusandae fugit itaque et quam quis atque adipisci suscipit necessitatibus asperiores fugiat nisi numquam, porro iusto ducimus. Aliquam cupiditate assumenda vitae facilis illo.</p>
+                            <p>Nemo alias, dicta ex sit voluptas maiores modi molestiae laborum expedita odio architecto minus sint perspiciatis, voluptates aperiam corrupti numquam praesentium, totam esse. Iusto aspernatur delectus neque expedita sed corrupti.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="group">
+                <h3>Card examples</h3>
+            </div>
+            <div class="card-group">
+                <div class="card-grid">
+                    <div class="card card-border">
+                        <div class="card-header">
+                            Border card
+                        </div>
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn">Details</button>
+                            <button class="btn btn-outline">Contact</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header">
+                            Shadow card
+                        </div>
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. -->
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn">Details</button>
+                            <button class="btn btn-outline">Contact</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="assets/img/card.jpg" alt="">
+                        </div>
+                        <div class="card-body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn">Details</button>
+                            <button class="btn btn-outline">Contact</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<script src="assets/scripts/samples.js"></script>
+<script src="assets/scripts/navbar.js"></script>
+<script src="assets/scripts/buttons.js"></script>
+<script src="assets/scripts/animations.js"></script>
+<script src="assets/scripts/carousel.js"></script>
+<script src="assets/scripts/modal.js"></script>
+<script src="assets/scripts/expansion.js"></script>
+<script src="assets/scripts/sidebar.js"></script>
+<script src="assets/scripts/tables.js"></script>
+</html>

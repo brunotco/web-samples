@@ -1,0 +1,60 @@
+:root {
+    --table-bg-color: hsl(0, 0%, 20%);
+    --table-text-color: hsl(0, 50%, 100%);
+    --table-shadow: hsl(0, 0%, 0%, .5);
+    --caption-bg-color: hsl(0 0% 0%);
+}
+
+table {
+    width: 100%;
+    background: var(--table-bg-color);
+    color: var(--table-text-color);
+    border-radius: .5rem;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 2px 15px 0 var(--table-shadow);
+    &:has(caption) {
+        border-radius: 0 0 .5rem .5rem;
+    }
+    & caption {
+        background: var(--caption-bg-color);
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        border-radius: .5rem .5rem 0 0;
+    }
+    & caption, th,td {
+        padding: 1rem;
+    }
+    & caption, th {
+        text-align: left;
+    }
+    & th {
+        background: hsl(0 0% 0% / .4);
+    }
+    & tr:nth-of-type(2n) {
+        background: hsl(0 0% 0% / .2);
+    }
+}
+
+@media (max-width: 700px) {
+    th {
+        display: none;
+    }
+    td {
+        display: grid;
+        gap: .5rem;
+        grid-template-columns: 15ch auto;
+        padding: .5rem 1rem !important;
+        &:first-child {
+            padding-top: 1rem !important;
+        }
+        &:last-child {
+            padding-bottom: 1rem !important;
+        }
+        &::before {
+            content: attr(cell-name);
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+    }
+}

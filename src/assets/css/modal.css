@@ -1,0 +1,58 @@
+:root {
+    --modal-bg-color: hsl(0, 0%, 100%);
+    --modal-border-color: hsl(0, 0%, 0%);
+    --modal-shadow-color: hsl(0, 0%, 0%);
+    --modal-overlay-color-1: hsl(0, 0%, 66%, .8);
+    --modal-overlay-color-2: hsl(0, 0%, 0%, .8);
+    --modal-overlay-bg: linear-gradient(45deg, var(--modal-overlay-color-1), var(--modal-overlay-color-2));
+}
+
+.modal-container {
+    & * {
+        opacity: 0;
+        pointer-events: none;
+        transition: 500ms ease-in-out;
+    }
+    &.active * {
+        opacity: 1;
+        pointer-events: all;
+    }
+    & .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid var(--modal-border-color);
+        border-radius: .5rem;
+        z-index: 100;
+        background-color: var(--modal-bg-color);
+        width: 500px;
+        max-width: 80%;
+        padding: 2rem;
+        box-shadow: 0 0 10px var(--modal-shadow-color);
+        & .modal-header {
+            padding-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & .modal-title {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+            & .modal-close {
+                cursor: pointer;
+                border: none;
+                outline: none;
+                background: none;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+    }
+    & .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: var(--modal-overlay-bg);
+        z-index: 99;
+    }
+}

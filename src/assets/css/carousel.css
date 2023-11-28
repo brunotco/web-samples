@@ -1,0 +1,58 @@
+:root {
+    --carousel-button-color: hsl(0, 0%, 100%, .5);
+    --carousel-button-bg: hsl(0, 0%, 0%, .1);
+    --carousel-button-active: hsl(0, 0%, 100%);
+    --carousel-button-active-bg: hsl(0, 0%, 0%, .2);
+    --carousel-button-active-outline: hsl(0, 0%, 0%);
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    & img.slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 500ms ease-in-out;
+        transition-delay: 500ms;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        &[active-slide] {
+            opacity: 1;
+            z-index: 1;
+            transition-delay: 0ms;
+        }
+    }
+    & .carousel-btn {
+        position: absolute;
+        z-index: 2;
+        background: none;
+        border: none;
+        font-size: 4rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--carousel-button-logo);
+        cursor: pointer;
+        border-radius: .25rem;
+        padding: 0 .25rem;
+        background-color: var(--carousel-button-bg);
+        &:hover,
+        &:focus {
+            color: var(--carousel-button-active);
+            background-color: var(--carousel-button-active-bg);
+        }
+        &:focus {
+            outline: 1px solid var(--carousel-button-active-outline);
+        }
+        &.prev {
+            left: 1rem;
+        }
+        &.next {
+            right: 1rem;
+        }
+    }
+}

@@ -1,0 +1,87 @@
+@import url('animation-frames.css');
+
+:root {
+    --gradient-0: cyan;
+    --gradient-25: violet;
+    --gradient-50: magenta;
+    --gradient-75: purple;
+    --gradient-100: black;
+}
+
+.animation-container {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    &.bubbly * {
+        animation-name: bubbly;
+        animation-duration: calc(var(--i) * 1s);
+        animation-fill-mode:forwards;
+        animation-timing-function:ease-in-out
+    }
+    &.falling * {
+        animation-name: falling;
+        animation-duration: calc(var(--i) * 1s);
+    }
+    &.rotating * {
+        animation-name: rotating;
+        animation-duration: calc(var(--i) * 1s);
+    }
+    &.gradient * {
+        animation-name: gradient;
+        animation-duration: calc(var(--i) * 2s);
+        animation-fill-mode:forwards;
+    }
+    &.lower-case * {
+        animation-name: lowerCase;
+        animation-duration: calc(var(--i) * 1s);
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+    }
+    &.fade-left * {
+        animation-name: fadeLeft;
+        animation-duration: calc(var(--i) * 1s);
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+    &.flip * {
+        animation-name: flip;
+        animation-duration: calc(var(--i) * 1s);
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+    &.slide * {
+        &:nth-child(1) {
+            animation-name: slideLeft;
+        }
+        &:nth-child(2) {
+            animation-name: slideTop;
+        }
+        &:nth-child(3) {
+            animation-name: slideRight;
+        }
+        &:nth-child(4) {
+            animation-name: slideLeft;
+        }
+        &:nth-child(5) {
+            animation-name: slideBottom;
+        }
+        &:nth-child(6) {
+            animation-name: slideRight;
+        }
+        &:nth-child(7) {
+            animation-name: slideLeft;
+        }
+        &:nth-child(8) {
+            animation-name: slideTop;
+        }
+        &:nth-child(9) {
+            animation-name: slideRight;
+        }
+        animation-duration: calc(var(--i) * 1s);
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+    }
+}
