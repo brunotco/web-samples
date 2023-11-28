@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf dist",
     "build": "webpack --mode production",
-    "rebuild": "npm run clean && npm run build",
+    "build:zip": "webpack --mode production",
     "dev": "webpack-dev-server --mode development"
   },
   "repository": {
@@ -21,10 +20,13 @@
   },
   "homepage": "https://github.com/brunotco/web-samples#readme",
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
+    "terser-webpack-plugin": "^5.3.9",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.2",
     "webpack": "^5.89.0",
