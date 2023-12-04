@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "build:zip": "webpack --mode production",
+    "build": "webpack --progress --color --mode production",
+    "build:zip": "webpack --progress --color --mode production",
     "dev": "webpack-dev-server --mode development"
   },
   "repository": {
